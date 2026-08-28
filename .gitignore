@@ -22,3 +22,16 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Eclipse specific
+.classpath
+.project
+.settings/
+
+# Test output (Extent Reports, screenshots, TestNG output)
+test-output/
+
+# Maven wrapper (if not using it)
+.mvn/
+mvnw
+mvnw.cmd
