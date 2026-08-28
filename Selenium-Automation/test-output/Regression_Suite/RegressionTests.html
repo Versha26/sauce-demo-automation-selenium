@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>TestNG:  RegressionTests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>RegressionTests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Aug 25 22:26:12 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>52 seconds (52393 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.CheckoutTest.checkoutWithoutFirstName()'><b>checkoutWithoutFirstName</b><br>Test class: tests.CheckoutTest<br>Test method: Checkout fails without first name</td>
+<td></td>
+<td>0</td>
+<td>tests.CheckoutTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.CheckoutTest.checkoutWithoutPostalCode()'><b>checkoutWithoutPostalCode</b><br>Test class: tests.CheckoutTest<br>Test method: Checkout fails without postal code</td>
+<td></td>
+<td>0</td>
+<td>tests.CheckoutTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.InventoryTest.inventoryPageLoadsAfterLogin()'><b>inventoryPageLoadsAfterLogin</b><br>Test class: tests.InventoryTest</td>
+<td></td>
+<td>0</td>
+<td>tests.InventoryTest@3bd82cf5</td></tr>
+<tr>
+<td title='tests.InventoryTest.sortProductsPriceLowToHigh()'><b>sortProductsPriceLowToHigh</b><br>Test class: tests.InventoryTest</td>
+<td></td>
+<td>0</td>
+<td>tests.InventoryTest@3bd82cf5</td></tr>
+<tr>
+<td title='tests.LoginTest.testInvalidPassword()'><b>testInvalidPassword</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTest@217ed35e</td></tr>
+<tr>
+<td title='tests.CartTest.cartReflectsMultipleItems()'><b>cartReflectsMultipleItems</b><br>Test class: tests.CartTest<br>Test method: After adding multiple items, cart shows all the items</td>
+<td></td>
+<td>0</td>
+<td>tests.CartTest@4988d8b8</td></tr>
+<tr>
+<td title='tests.CheckoutTest.checkoutWithoutLastName()'><b>checkoutWithoutLastName</b><br>Test class: tests.CheckoutTest<br>Test method: Checkout fails without last name</td>
+<td></td>
+<td>0</td>
+<td>tests.CheckoutTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.InventoryTest.addMultipleItemsToCart()'><b>addMultipleItemsToCart</b><br>Test class: tests.InventoryTest</td>
+<td></td>
+<td>0</td>
+<td>tests.InventoryTest@3bd82cf5</td></tr>
+<tr>
+<td title='tests.InventoryTest.removeItemFromCart()'><b>removeItemFromCart</b><br>Test class: tests.InventoryTest</td>
+<td></td>
+<td>0</td>
+<td>tests.InventoryTest@3bd82cf5</td></tr>
+<tr>
+<td title='tests.CartTest.emptyCartHasZeroItems()'><b>emptyCartHasZeroItems</b><br>Test class: tests.CartTest<br>Test method: Empty cart should have zero items</td>
+<td></td>
+<td>0</td>
+<td>tests.CartTest@4988d8b8</td></tr>
+<tr>
+<td title='tests.CartTest.removeItemFromCart()'><b>removeItemFromCart</b><br>Test class: tests.CartTest<br>Test method: After removing, cart doesn't show any item</td>
+<td></td>
+<td>0</td>
+<td>tests.CartTest@4988d8b8</td></tr>
+<tr>
+<td title='tests.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTest@217ed35e</td></tr>
+<tr>
+<td title='tests.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>5</td>
+<td>tests.LoginTest@217ed35e</td></tr>
+<tr>
+<td title='tests.InventoryTest.addSingleItemToCart()'><b>addSingleItemToCart</b><br>Test class: tests.InventoryTest</td>
+<td></td>
+<td>0</td>
+<td>tests.InventoryTest@3bd82cf5</td></tr>
+<tr>
+<td title='tests.LoginTest.testLockedOutUser()'><b>testLockedOutUser</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTest@217ed35e</td></tr>
+<tr>
+<td title='tests.CartTest.cartReflectsAddedItem()'><b>cartReflectsAddedItem</b><br>Test class: tests.CartTest<br>Test method: After adding item in cart, cart relefts the same item</td>
+<td></td>
+<td>0</td>
+<td>tests.CartTest@4988d8b8</td></tr>
+<tr>
+<td title='tests.CartTest.continueShoppingReturnToInventoryPage()'><b>continueShoppingReturnToInventoryPage</b><br>Test class: tests.CartTest<br>Test method: Continue Shopping option returns to Inventory page</td>
+<td></td>
+<td>0</td>
+<td>tests.CartTest@4988d8b8</td></tr>
+<tr>
+<td title='tests.InventoryTest.sortProductNamesZtoA()'><b>sortProductNamesZtoA</b><br>Test class: tests.InventoryTest</td>
+<td></td>
+<td>0</td>
+<td>tests.InventoryTest@3bd82cf5</td></tr>
+<tr>
+<td title='tests.CheckoutTest.compleCheckoutFlowEndToEnd()'><b>compleCheckoutFlowEndToEnd</b><br>Test class: tests.CheckoutTest<br>Test method: Test the complete checkout flow from end to end</td>
+<td></td>
+<td>0</td>
+<td>tests.CheckoutTest@c0c2f8d</td></tr>
+</table><p>
+</body>
+</html>
