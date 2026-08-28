@@ -13,14 +13,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up JKDK 17
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Run tests
-        run: mvn test -Dbrowser=chrome
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Run test suite headless
+        run: mvn test -Dheadless=true -Dbrowser=chrome
 
       - name: Upload Extent Report
         if: always()
@@ -28,3 +36,10 @@ jobs:
         with:
           name: extent-report
           path: test-output/*.html
+          
+      - name: Upload Screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: failure-screenshots
+          path: test-output/screenshots/*.png
